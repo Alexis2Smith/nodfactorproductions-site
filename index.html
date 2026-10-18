@@ -1287,94 +1287,105 @@
     </style>
 <style id="neutral-color-scheme">
 :root {
-  --bg: #f4f5f6;
-  --ink: #22262a;
-  --muted: #646c73;
-  --line: #d9dcdf;
-  --dark: #30353a;
-  --accent: #7a8289;
-  --green: #176c4b;
-  --brown: #f4f5f6;
-  --brown-mid: #e8eaec;
-  --brown-light: #7a8289;
-  --orange: #7a8289;
-  --orange-warm: #646c73;
-  --yellow: #22262a;
-  --yellow-pale: #646c73;
-  --green-light: #176c4b;
-  --cream: #22262a;
-  --cream-dark: #646c73;
-  --gold: #7a8289;
-  --gold-bright: #646c73;
-  --gold-dim: #596168;
-  --navy: #30353a;
-  --navy-mid: #596168;
-  --navy-light: #646c73;
-  --obsidian: #30353a;
-  --champagne: #22262a;
-  --champagne-dark: #646c73;
-  --groove-line: repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(122,130,137,.08) 2px, rgba(122,130,137,.08) 4px);
+  --bg: #070817;
+  --ink: #fff4f1;
+  --muted: #b5bad2;
+  --line: #27315e;
+  --dark: #050611;
+  --accent: #8b45ff;
+  --green: #245eff;
+  --brown: #080b1c;
+  --brown-mid: #121735;
+  --brown-light: #50aaff;
+  --orange: #8b45ff;
+  --orange-warm: #c23aff;
+  --yellow: #fff4f1;
+  --yellow-pale: #ffd8d2;
+  --green-light: #49cfff;
+  --cream: #fff4f1;
+  --cream-dark: #c5c7df;
+  --gold: #8b45ff;
+  --gold-bright: #30a8ff;
+  --gold-dim: #513b9d;
+  --navy: #07091b;
+  --navy-mid: #111638;
+  --navy-light: #1a2b68;
+  --obsidian: #050611;
+  --champagne: #fff4f1;
+  --champagne-dark: #ffd8d2;
+  --groove-line: repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(47,126,255,.13) 2px, rgba(47,126,255,.13) 4px);
 }
-body { background: var(--bg) !important; color: var(--ink) !important; }
-header { background: #30353a !important; color: #fff; }
-.hero-title { color: #fff !important; text-shadow: 3px 3px 0 rgba(34,38,42,.5), 0 8px 28px rgba(0,0,0,.4) !important; }
-.hero-subtitle { color: #d9dcdf !important; }
-.hero-tagline { color: #f4f5f6 !important; }
-.logo-badge { background: #176c4b !important; color: #fff !important; }
-.hero-divider { background: linear-gradient(90deg, transparent, #d9dcdf, #7a8289, transparent) !important; }
-.mixer-bar { background: linear-gradient(90deg, #30353a, #596168, #30353a) !important; border-bottom-color: #7a8289 !important; color: #fff; }
-.mixer-logo, .nav-link, .fader-label { color: #fff !important; }
-.mixer-bar .nav-brand { background-image: linear-gradient(90deg, #fff, #d9dcdf, #fff) !important; }
-.radio-player .rp-title, .radio-player .rp-status, .rp-playbtn { color: #fff !important; }
-.nav-link:hover { color: #d9dcdf !important; }
-.nav-btn { border-color: #7a8289 !important; color: #fff !important; }
-.nav-btn.primary { background: #176c4b !important; border-color: #176c4b !important; color: #fff !important; }
-.nav-btn::before { background: #176c4b !important; }
+body { background: linear-gradient(160deg, #050611 0%, #0a1030 55%, #050611 100%) !important; color: #fff4f1 !important; }
+header { background: #050611 !important; color: #fff4f1 !important; }
+.hero-bg video { filter: brightness(.84) saturate(1.45) contrast(1.08) !important; }
+.hero-overlay {
+  background:
+    radial-gradient(ellipse 78% 60% at 50% 42%, rgba(40,104,255,.24) 0%, transparent 70%),
+    radial-gradient(ellipse 65% 50% at 78% 28%, rgba(142,52,255,.22) 0%, transparent 72%),
+    linear-gradient(180deg, rgba(5,6,17,.14) 0%, rgba(5,6,17,.62) 62%, rgba(5,6,17,.96) 100%) !important;
+}
+.hero-title { color: #fff4f1 !important; text-shadow: 0 0 24px rgba(45,113,255,.38), 3px 3px 0 rgba(18,23,53,.8), 0 8px 28px rgba(0,0,0,.55) !important; }
+.hero-subtitle { color: #d8ccff !important; }
+.hero-tagline { color: #ffd8d2 !important; }
+.logo-badge { background: #245eff !important; color: #fff !important; box-shadow: 0 0 22px rgba(36,94,255,.45); }
+.hero-divider { background: linear-gradient(90deg, transparent, #2f7dff, #a245ff, #ff5268, transparent) !important; }
+.mixer-bar { background: linear-gradient(90deg, #080b1c, #111638 48%, #22134b 72%, #080b1c) !important; border-bottom-color: #347cff !important; box-shadow: 0 5px 24px rgba(39,82,255,.22); color: #fff4f1; }
+.mixer-logo, .nav-link, .fader-label { color: #fff4f1 !important; }
+.mixer-bar .nav-brand { background-image: linear-gradient(90deg, #fff4f1, #7ccaff, #d2a5ff, #fff4f1) !important; }
+.radio-player { border-color: rgba(66,153,255,.68) !important; box-shadow: 0 0 22px rgba(42,107,255,.16); }
+.radio-player .rp-title, .radio-player .rp-status, .rp-playbtn { color: #fff4f1 !important; }
+.nav-link:hover { color: #c89bff !important; }
+.nav-btn { border-color: #428cff !important; color: #fff4f1 !important; box-shadow: inset 0 0 14px rgba(41,102,255,.08); }
+.nav-btn.primary { background: linear-gradient(110deg, #245eff, #8843ff) !important; border-color: #5597ff !important; color: #fff !important; box-shadow: 0 0 22px rgba(70,93,255,.35); }
+.nav-btn::before { background: linear-gradient(110deg, #245eff, #a13bff) !important; }
 .nav-btn:hover, .nav-btn.primary:hover { color: #fff !important; }
 .soundtrack-banner, .presale-banner {
-  background: #fff !important;
-  border: 1px solid #d9dcdf !important;
-  color: #22262a !important;
-  box-shadow: 0 4px 18px rgba(34,38,42,.06);
+  background: linear-gradient(135deg, rgba(11,15,39,.96), rgba(29,15,54,.95)) !important;
+  border: 1px solid rgba(93,143,255,.72) !important;
+  color: #fff4f1 !important;
+  box-shadow: 0 0 28px rgba(54,93,255,.18), inset 0 0 28px rgba(145,58,255,.08);
 }
 .soundtrack-banner > div:nth-child(2), .presale-banner > div:nth-child(2) {
-  background-image: linear-gradient(90deg, #646c73, #7a8289, #176c4b, #7a8289, #646c73) !important;
+  background-image: linear-gradient(90deg, #327dff, #a145ff, #ff5268, #a145ff, #327dff) !important;
 }
-.presale-banner a { background: #176c4b !important; color: #fff !important; }
+.presale-banner a { background: linear-gradient(110deg, #245eff, #8b45ff) !important; color: #fff !important; }
 .section-title, .radio-info h3, .service-card h3, .contact-info h3,
-.track-title, .addon-info h4, .pc-title { color: #22262a !important; }
-.artist-name, .show-card-info h4 { color: #fff !important; }
-.artist-type, .show-card-info span { color: #d9dcdf !important; }
-.section-label, .track-number, .form-label, .footer-link { color: #7a8289 !important; }
+.track-title, .addon-info h4, .pc-title { color: #fff4f1 !important; text-shadow: 0 0 16px rgba(77,117,255,.2); }
+.artist-name, .show-card-info h4 { color: #fff4f1 !important; }
+.artist-type, .show-card-info span { color: #c8c9e5 !important; }
+.section-label, .track-number, .form-label, .footer-link { color: #65b5ff !important; }
+.section-line { background: linear-gradient(90deg, #2878ff, #a145ff, #ff5268) !important; box-shadow: 0 0 14px rgba(69,113,255,.42); }
 .radio-section, .track-card, .price-card, .addon-card, .service-card {
-  color: #22262a !important;
-  background: #fff !important;
-  border-color: #d9dcdf !important;
-  box-shadow: 0 4px 18px rgba(34,38,42,.06);
+  color: #fff4f1 !important;
+  background: linear-gradient(145deg, rgba(15,21,53,.96), rgba(7,9,27,.98)) !important;
+  border-color: rgba(73,139,255,.58) !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,.28), inset 0 0 20px rgba(87,56,194,.08);
 }
-.radio-section::before { color: #176c4b !important; }
+.radio-section { border-color: #4b8dff !important; box-shadow: 0 0 28px rgba(48,100,255,.18), inset 0 0 30px rgba(140,58,255,.08) !important; }
+.radio-section::before { color: #ff4058 !important; text-shadow: 0 0 12px rgba(255,49,77,.65); }
 .radio-info p, .track-genre, .pc-desc, .pc-features li, .addon-info p,
-.service-card p, .contact-info p, .pricing-note, .footer-tagline { color: #646c73 !important; }
-.track-card::after { background: linear-gradient(180deg, #7a8289, #176c4b) !important; }
-.price-card.featured { background: #f4f5f6 !important; border-color: #176c4b !important; }
-.pc-price, .addon-price { color: #176c4b !important; }
-.pc-badge, .pc-badge.hot { background: #e8eaec !important; color: #30353a !important; border-color: #d9dcdf !important; box-shadow: none !important; }
-.ai-badge { background: #176c4b !important; color: #fff !important; }
+.service-card p, .contact-info p, .pricing-note, .footer-tagline { color: #c5c7df !important; }
+.track-card::after { background: linear-gradient(180deg, #327dff, #a145ff, #ff5268) !important; }
+.track-card:hover, .price-card:hover, .addon-card:hover, .service-card:hover { border-color: #a145ff !important; box-shadow: 0 0 26px rgba(123,75,255,.24) !important; }
+.price-card.featured { background: linear-gradient(145deg, #151b42, #160e32) !important; border-color: #b34dff !important; box-shadow: 0 0 30px rgba(150,62,255,.22) !important; }
+.pc-price, .addon-price { color: #65baff !important; }
+.pc-badge, .pc-badge.hot { background: rgba(47,125,255,.2) !important; color: #e9e1ff !important; border-color: rgba(153,93,255,.7) !important; box-shadow: 0 0 12px rgba(120,69,255,.18) !important; }
+.ai-badge { background: #823dff !important; color: #fff !important; }
 .btn-primary, .pc-cta, .buy-btn, .submit-btn, .soundcloud-btn,
-.contact-detail .icon { background: #176c4b !important; color: #fff !important; border-color: #176c4b !important; }
-.btn-primary:hover, .pc-cta:hover, .buy-btn:hover, .submit-btn:hover, .soundcloud-btn:hover { background: #12563c !important; }
-.form-input { background: #fff !important; color: #22262a !important; border-color: #d9dcdf !important; }
-.form-input::placeholder { color: #646c73 !important; }
-.social-link { background: #fff !important; border-color: #d9dcdf !important; color: #30353a !important; }
-.social-link:hover { background: #176c4b !important; color: #fff !important; border-color: #176c4b !important; }
-footer { background: #30353a !important; border-top-color: #7a8289 !important; }
-.footer-logo, footer .footer-link { color: #fff !important; }
-footer .footer-tagline, footer .footer-copy, footer .footer-credit { color: #d9dcdf !important; }
-footer .footer-credit a { color: #d9dcdf !important; }
-.tape-strip { background: linear-gradient(90deg, transparent, #7a8289, #176c4b, #7a8289, transparent) !important; }
-.gold-text, .nav-brand { background-image: linear-gradient(90deg, #646c73, #7a8289, #176c4b, #7a8289, #646c73) !important; }
-.fader-track { background: rgba(122,130,137,.25) !important; }
-.fader-thumb { background: linear-gradient(180deg, #646c73, #7a8289) !important; box-shadow: none !important; }
+.contact-detail .icon { background: linear-gradient(110deg, #245eff, #8b45ff) !important; color: #fff !important; border-color: #5796ff !important; box-shadow: 0 5px 20px rgba(63,91,255,.28); }
+.btn-primary:hover, .pc-cta:hover, .buy-btn:hover, .submit-btn:hover, .soundcloud-btn:hover { background: linear-gradient(110deg, #397bff, #a83eff) !important; box-shadow: 0 0 25px rgba(125,63,255,.45); }
+.form-input { background: #0b1030 !important; color: #fff4f1 !important; border-color: #344b91 !important; }
+.form-input::placeholder { color: #a9aecb !important; }
+.social-link { background: #101633 !important; border-color: #354b8c !important; color: #f7efff !important; }
+.social-link:hover { background: linear-gradient(110deg, #245eff, #8b45ff) !important; color: #fff !important; border-color: #a65bff !important; }
+footer { background: linear-gradient(105deg, #060714, #111633 55%, #1a1034) !important; border-top-color: #387dff !important; }
+.footer-logo, footer .footer-link { color: #fff4f1 !important; }
+footer .footer-tagline, footer .footer-copy, footer .footer-credit { color: #c5c7df !important; }
+footer .footer-credit a { color: #8ecbff !important; }
+.tape-strip { background: linear-gradient(90deg, transparent, #327dff, #a145ff, #ff5268, transparent) !important; }
+.gold-text, .nav-brand { background-image: linear-gradient(90deg, #6fbaff, #8b45ff, #ff697d, #8b45ff, #6fbaff) !important; }
+.fader-track { background: rgba(58,122,255,.28) !important; }
+.fader-thumb { background: linear-gradient(180deg, #39adff, #8b45ff) !important; box-shadow: 0 0 12px rgba(71,133,255,.54) !important; }
 </style>
 </head>
 <body>
