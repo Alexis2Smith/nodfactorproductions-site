@@ -10,29 +10,29 @@
     :root {
       --brown: #0D1117;
       --brown-mid: #1C2333;
-      --brown-light: #B8973A;
-      --orange: #C9982A;
-      --orange-warm: #E4B84A;
-      --yellow: #F0D060;
-      --yellow-pale: #F7E9B0;
+      --brown-light: #7A8289;
+      --orange: #7A8289;
+      --orange-warm: #646C73;
+      --yellow: #646C73;
+      --yellow-pale: #D9DCDF;
       --green: #1C3A2E;
       --green-light: #2E6B50;
       --cream: #F5EDD6;
       --cream-dark: #E8D9B0;
       --dark: #080C10;
       --groove-line: repeating-linear-gradient(
-        90deg, transparent, transparent 2px, rgba(201,152,42,0.10) 2px, rgba(201,152,42,0.10) 4px
+        90deg, transparent, transparent 2px, rgba(122,130,137,0.10) 2px, rgba(122,130,137,0.10) 4px
       );
       /* Luxury extras */
-      --gold: #C9982A;
-      --gold-bright: #F0D060;
-      --gold-dim: #8A6A1A;
+      --gold: #7A8289;
+      --gold-bright: #646C73;
+      --gold-dim: #596168;
       --navy: #0D1B2A;
       --navy-mid: #162036;
       --navy-light: #1E2D4A;
       --obsidian: #080C10;
       --champagne: #F5EDD6;
-      --champagne-dark: #D4B87A;
+      --champagne-dark: #646C73;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -105,7 +105,7 @@
       position: absolute;
       inset: 0;
       background: 
-        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,152,42,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(122,130,137,0.18) 0%, transparent 70%),
         linear-gradient(180deg, rgba(8,12,16,0.2) 0%, rgba(8,12,16,0.7) 60%, rgba(8,12,16,1) 100%);
     }
 
@@ -310,7 +310,7 @@
       transition: background 0.2s;
     }
 
-    .mixer-fader:hover { background: rgba(240,208,96,0.1); }
+    .mixer-fader:hover { background: rgba(122,130,137,0.1); }
 
     .fader-track {
       width: 4px;
@@ -348,7 +348,7 @@
       gap: 1rem;
       margin-top: 1.2rem;
       background: rgba(0,0,0,0.4);
-      border: 1px solid rgba(201,152,42,0.5);
+      border: 1px solid rgba(122,130,137,0.5);
       border-radius: 50px;
       padding: 0.6rem 1.2rem 0.6rem 0.6rem;
     }
@@ -367,7 +367,7 @@
       -webkit-tap-highlight-color: transparent;
       touch-action: manipulation;
     }
-    .rp-playbtn:hover { transform: scale(1.1); background: var(--yellow); border-color: var(--gold-bright); box-shadow: 0 0 40px rgba(240,208,96,0.15); }
+    .rp-playbtn:hover { transform: scale(1.1); background: var(--yellow); border-color: var(--gold-bright); box-shadow: 0 0 40px rgba(122,130,137,0.15); }
     .rp-info { flex: 1; }
     .rp-title {
       font-family: 'Bebas Neue', sans-serif;
@@ -382,7 +382,7 @@
       letter-spacing: 0.08em;
       margin-top: 2px;
     }
-    .rp-status.playing { color: #C9982A; }
+    .rp-status.playing { color: #7A8289; }
     .rp-vol { display: flex; align-items: center; gap: 0.4rem; }
 
     .radio-section {
@@ -467,7 +467,7 @@
 
     .track-card {
       background: linear-gradient(145deg, rgba(13,27,42,0.6), rgba(8,12,16,0.9));
-      border: 1px solid rgba(201,152,42,0.3);
+      border: 1px solid rgba(122,130,137,0.3);
       border-radius: 8px;
       padding: 1.5rem;
       position: relative;
@@ -542,10 +542,10 @@
       width: 80px; height: 80px;
       border-radius: 50%;
       background: 
-        radial-gradient(circle at 50% 50%, var(--brown-mid) 18%, var(--dark) 19%, var(--dark) 22%, rgba(255,200,80,0.1) 23%, rgba(255,200,80,0.1) 24%, var(--dark) 25%,
-        var(--dark) 37%, rgba(255,200,80,0.05) 38%, rgba(255,200,80,0.05) 39%, var(--dark) 40%,
-        var(--dark) 51%, rgba(255,200,80,0.05) 52%, rgba(255,200,80,0.05) 53%, var(--dark) 54%);
-      border: 1px solid rgba(201,152,42,0.4);
+        radial-gradient(circle at 50% 50%, var(--brown-mid) 18%, var(--dark) 19%, var(--dark) 22%, rgba(122,130,137,0.1) 23%, rgba(122,130,137,0.1) 24%, var(--dark) 25%,
+        var(--dark) 37%, rgba(122,130,137,0.05) 38%, rgba(122,130,137,0.05) 39%, var(--dark) 40%,
+        var(--dark) 51%, rgba(122,130,137,0.05) 52%, rgba(122,130,137,0.05) 53%, var(--dark) 54%);
+      border: 1px solid rgba(122,130,137,0.4);
       position: absolute;
       top: -20px; right: -20px;
       opacity: 0.4;
@@ -597,7 +597,7 @@
     }
 
     .show-card:hover .show-card-overlay {
-      background: linear-gradient(0deg, rgba(8,12,16,0.6) 0%, rgba(201,152,42,0.2) 100%);
+      background: linear-gradient(0deg, rgba(8,12,16,0.6) 0%, rgba(122,130,137,0.2) 100%);
     }
 
     .show-card-info h4 {
@@ -720,7 +720,7 @@
     }
 
     .price-card {
-      border: 1px solid rgba(201,152,42,0.3);
+      border: 1px solid rgba(122,130,137,0.3);
       border-radius: 12px;
       padding: 2rem 1.8rem;
       background: linear-gradient(160deg, rgba(13,27,42,0.35), rgba(8,12,16,0.8));
@@ -733,12 +733,12 @@
     .price-card:hover {
       border-color: var(--orange);
       transform: translateY(-5px);
-      box-shadow: 0 12px 40px rgba(201,152,42,0.2);
+      box-shadow: 0 12px 40px rgba(122,130,137,0.2);
     }
     .price-card.featured {
       border-color: var(--orange);
-      background: linear-gradient(160deg, rgba(201,152,42,0.15), rgba(13,27,42,0.6));
-      box-shadow: 0 0 30px rgba(201,152,42,0.15);
+      background: linear-gradient(160deg, rgba(122,130,137,0.15), rgba(13,27,42,0.6));
+      box-shadow: 0 0 30px rgba(122,130,137,0.15);
     }
     .price-card::before {
       content: '';
@@ -761,14 +761,14 @@
       padding: 3px 10px;
       border-radius: 20px;
       margin-bottom: 1rem;
-      background: rgba(201,152,42,0.2);
+      background: rgba(122,130,137,0.2);
       color: var(--orange);
-      border: 1px solid rgba(201,152,42,0.4);
+      border: 1px solid rgba(122,130,137,0.4);
     }
     .pc-badge.hot {
-      background: rgba(201,152,42,0.35);
+      background: rgba(122,130,137,0.35);
       color: var(--yellow);
-      border-color: var(--gold-bright); box-shadow: 0 0 40px rgba(240,208,96,0.15);
+      border-color: var(--gold-bright); box-shadow: 0 0 40px rgba(122,130,137,0.15);
     }
 
     .pc-title {
@@ -791,7 +791,7 @@
     .pc-price .pc-per {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 0.75rem;
-      color: rgba(240,208,96,0.7);
+      color: rgba(122,130,137,0.7);
       letter-spacing: 0.05em;
       display: block;
       margin-top: 0.2rem;
@@ -807,7 +807,7 @@
 
     .pc-divider {
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(201,152,42,0.4), transparent);
+      background: linear-gradient(90deg, transparent, rgba(122,130,137,0.4), transparent);
       margin-bottom: 1.2rem;
     }
 
@@ -834,7 +834,7 @@
       font-size: 0.75rem;
     }
     .pc-features li.note {
-      color: rgba(240,208,96,0.7);
+      color: rgba(122,130,137,0.7);
       font-style: italic;
       font-size: 0.78rem;
     }
@@ -869,7 +869,7 @@
       margin-bottom: 2rem;
     }
     .addon-card {
-      border: 1px solid rgba(240,208,96,0.2);
+      border: 1px solid rgba(122,130,137,0.2);
       border-radius: 8px;
       padding: 1.2rem 1.5rem;
       background: rgba(8,12,16,0.6);
@@ -878,7 +878,7 @@
       gap: 1rem;
       transition: border-color 0.3s;
     }
-    .addon-card:hover { border-color: var(--gold-bright); box-shadow: 0 0 40px rgba(240,208,96,0.15); }
+    .addon-card:hover { border-color: var(--gold-bright); box-shadow: 0 0 40px rgba(122,130,137,0.15); }
     .addon-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
     .addon-info h4 {
       font-family: 'Bebas Neue', sans-serif;
@@ -919,7 +919,7 @@
       gap: 1.5rem;
     }
     .service-card {
-      border: 1px solid rgba(201,152,42,0.3);
+      border: 1px solid rgba(122,130,137,0.3);
       border-radius: 8px;
       padding: 2.5rem 2rem;
       background: linear-gradient(145deg, rgba(13,27,42,0.3), rgba(8,12,16,0.7));
@@ -1020,7 +1020,7 @@
 
     .form-input {
       background: rgba(13,27,42,0.6);
-      border: 1px solid rgba(201,152,42,0.4);
+      border: 1px solid rgba(122,130,137,0.4);
       color: var(--cream);
       padding: 0.9rem 1rem;
       font-family: 'IBM Plex Mono', monospace;
@@ -1064,7 +1064,7 @@
       justify-content: center;
       width: 44px; height: 44px;
       border-radius: 50%;
-      border: 1px solid rgba(201,152,42,0.5);
+      border: 1px solid rgba(122,130,137,0.5);
       background: rgba(13,27,42,0.4);
       color: var(--cream);
       text-decoration: none;
@@ -1076,7 +1076,7 @@
       border-color: var(--orange);
       color: var(--dark);
       transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(201,152,42,0.35);
+      box-shadow: 0 6px 20px rgba(122,130,137,0.35);
     }
     .social-link svg {
       width: 20px; height: 20px;
@@ -1200,7 +1200,7 @@
     }
 
     .gold-text {
-      background: linear-gradient(90deg, #8A6A1A, #C9982A, #F0D060, #F7E9B0, #F0D060, #C9982A, #8A6A1A);
+      background: linear-gradient(90deg, #596168, #7A8289, #646C73, #D9DCDF, #646C73, #7A8289, #596168);
       background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -1210,19 +1210,19 @@
 
     /* ── LUXURY CARD GLOW ── */
     .price-card:hover, .track-card:hover, .addon-card:hover {
-      box-shadow: 0 8px 40px rgba(201,152,42,0.2), 0 2px 8px rgba(201,152,42,0.1);
+      box-shadow: 0 8px 40px rgba(122,130,137,0.2), 0 2px 8px rgba(122,130,137,0.1);
     }
 
     /* ── GOLD DIVIDER LINE ── */
     .tape-strip {
-      background: linear-gradient(90deg, transparent, #C9982A 20%, #F0D060 50%, #C9982A 80%, transparent) !important;
+      background: linear-gradient(90deg, transparent, #7A8289 20%, #646C73 50%, #7A8289 80%, transparent) !important;
       height: 1px !important;
       opacity: 0.6;
     }
 
     /* ── LUXURY BUTTON ── */
     .btn-primary, .pc-cta {
-      background: linear-gradient(135deg, #8A6A1A, #C9982A, #F0D060, #C9982A) !important;
+      background: linear-gradient(135deg, #596168, #7A8289, #646C73, #7A8289) !important;
       background-size: 200% auto !important;
       color: #080C10 !important;
       border: none !important;
@@ -1233,18 +1233,18 @@
     .btn-primary:hover, .pc-cta:hover {
       background-position: right center !important;
       transform: translateY(-2px) !important;
-      box-shadow: 0 8px 30px rgba(201,152,42,0.4) !important;
+      box-shadow: 0 8px 30px rgba(122,130,137,0.4) !important;
     }
 
     /* ── MIXER BAR GOLD FADERS ── */
-    .fader-track { background: rgba(201,152,42,0.15) !important; }
-    .fader-thumb { background: linear-gradient(180deg, #F0D060, #C9982A) !important; box-shadow: 0 0 8px rgba(201,152,42,0.5) !important; }
+    .fader-track { background: rgba(122,130,137,0.15) !important; }
+    .fader-thumb { background: linear-gradient(180deg, #646C73, #7A8289) !important; box-shadow: 0 0 8px rgba(122,130,137,0.5) !important; }
 
     /* ── NAV LINKS GOLD HOVER ── */
-    .nav-link { color: #D4B87A !important; }
-    .nav-link:hover { color: #F0D060 !important; }
+    .nav-link { color: #646C73 !important; }
+    .nav-link:hover { color: #646C73 !important; }
     .nav-brand { 
-      background: linear-gradient(90deg, #C9982A, #F0D060, #C9982A);
+      background: linear-gradient(90deg, #7A8289, #646C73, #7A8289);
       background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -1254,8 +1254,8 @@
 
     /* ── SOCIAL LINKS GOLD ── */
     .social-link:hover {
-      background: linear-gradient(135deg, #8A6A1A, #C9982A) !important;
-      border-color: #F0D060 !important;
+      background: linear-gradient(135deg, #596168, #7A8289) !important;
+      border-color: #646C73 !important;
     }
 
     
@@ -1278,6 +1278,86 @@
     .pandora-icon  { background: transparent; }
 
     </style>
+
+<style id="neutral-color-scheme">
+:root {
+  --bg: #f4f5f6;
+  --ink: #22262a;
+  --muted: #646c73;
+  --line: #d9dcdf;
+  --dark: #30353a;
+  --accent: #7a8289;
+  --green: #176c4b;
+  --brown: #f4f5f6;
+  --brown-mid: #e8eaec;
+  --brown-light: #7a8289;
+  --orange: #7a8289;
+  --orange-warm: #646c73;
+  --yellow: #22262a;
+  --yellow-pale: #646c73;
+  --green-light: #176c4b;
+  --cream: #22262a;
+  --cream-dark: #646c73;
+  --gold: #7a8289;
+  --gold-bright: #646c73;
+  --gold-dim: #596168;
+  --navy: #30353a;
+  --navy-mid: #596168;
+  --navy-light: #646c73;
+  --obsidian: #30353a;
+  --champagne: #22262a;
+  --champagne-dark: #646c73;
+  --groove-line: repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(122,130,137,.08) 2px, rgba(122,130,137,.08) 4px);
+}
+body { background: var(--bg) !important; color: var(--ink) !important; }
+header { background: #30353a !important; color: #fff; }
+.hero-title { color: #fff !important; text-shadow: 3px 3px 0 rgba(34,38,42,.5), 0 8px 28px rgba(0,0,0,.4) !important; }
+.hero-subtitle { color: #d9dcdf !important; }
+.hero-tagline { color: #f4f5f6 !important; }
+.logo-badge { background: #176c4b !important; color: #fff !important; }
+.hero-divider { background: linear-gradient(90deg, transparent, #d9dcdf, #7a8289, transparent) !important; }
+.mixer-bar { background: linear-gradient(90deg, #30353a, #596168, #30353a) !important; border-bottom-color: #7a8289 !important; color: #fff; }
+.mixer-logo, .nav-link { color: #fff !important; }
+.nav-link:hover { color: #d9dcdf !important; }
+.nav-btn { border-color: #7a8289 !important; color: #30353a !important; }
+.nav-btn.primary { background: #176c4b !important; border-color: #176c4b !important; color: #fff !important; }
+.nav-btn::before { background: #176c4b !important; }
+.nav-btn:hover, .nav-btn.primary:hover { color: #fff !important; }
+.section-title, .radio-info h3, .service-card h3, .contact-info h3,
+.track-title, .artist-name, .show-card-info h4, .addon-info h4,
+.pc-title, .footer-logo { color: #22262a !important; }
+.section-label, .track-number, .form-label, .footer-link { color: #7a8289 !important; }
+.radio-section, .track-card, .price-card, .addon-card, .service-card {
+  color: #22262a !important;
+  background: #fff !important;
+  border-color: #d9dcdf !important;
+  box-shadow: 0 4px 18px rgba(34,38,42,.06);
+}
+.radio-section::before { color: #176c4b !important; }
+.radio-info p, .track-genre, .pc-desc, .pc-features li, .addon-info p,
+.service-card p, .contact-info p, .pricing-note, .footer-tagline { color: #646c73 !important; }
+.track-card::after { background: linear-gradient(180deg, #7a8289, #176c4b) !important; }
+.price-card.featured { background: #f4f5f6 !important; border-color: #176c4b !important; }
+.pc-price, .addon-price { color: #176c4b !important; }
+.pc-badge, .pc-badge.hot { background: #e8eaec !important; color: #30353a !important; border-color: #d9dcdf !important; box-shadow: none !important; }
+.ai-badge { background: #176c4b !important; color: #fff !important; }
+.btn-primary, .pc-cta, .buy-btn, .submit-btn, .soundcloud-btn,
+.contact-detail .icon { background: #176c4b !important; color: #fff !important; border-color: #176c4b !important; }
+.btn-primary:hover, .pc-cta:hover, .buy-btn:hover, .submit-btn:hover, .soundcloud-btn:hover { background: #12563c !important; }
+.form-input { background: #fff !important; color: #22262a !important; border-color: #d9dcdf !important; }
+.form-input::placeholder { color: #646c73 !important; }
+.social-link { background: #fff !important; border-color: #d9dcdf !important; color: #30353a !important; }
+.social-link:hover { background: #176c4b !important; color: #fff !important; border-color: #176c4b !important; }
+footer { background: #30353a !important; border-top-color: #7a8289 !important; }
+.footer-logo, footer .footer-link { color: #fff !important; }
+footer .footer-tagline, footer .footer-copy, footer .footer-credit { color: #d9dcdf !important; }
+footer .footer-credit a { color: #d9dcdf !important; }
+.tape-strip { background: linear-gradient(90deg, transparent, #7a8289, #176c4b, #7a8289, transparent) !important; }
+.gold-text, .nav-brand { background-image: linear-gradient(90deg, #646c73, #7a8289, #176c4b, #7a8289, #646c73) !important; }
+.fader-track { background: rgba(122,130,137,.25) !important; }
+.fader-thumb { background: linear-gradient(180deg, #646c73, #7a8289) !important; box-shadow: none !important; }
+</style>
+
 </head>
 <body>
 
@@ -1390,9 +1470,9 @@
   </div>
 
   <!-- Visitor Counter -->
-  <div id="visitor-counter" style="text-align:center;margin-top:18px;font-family:'Courier New',monospace;font-size:1.1rem;letter-spacing:2px;color:#c9a84c;">
+  <div id="visitor-counter" style="text-align:center;margin-top:18px;font-family:'Courier New',monospace;font-size:1.1rem;letter-spacing:2px;color:#7a8289;">
     <span style="opacity:0.7;font-size:0.75rem;text-transform:uppercase;letter-spacing:3px;display:block;margin-bottom:4px;">Total Visitors</span>
-    <span id="visit-count" style="font-size:1.6rem;font-weight:bold;color:#f0c040;">175,000</span>
+    <span id="visit-count" style="font-size:1.6rem;font-weight:bold;color:#646c73;">175,000</span>
   </div>
   <script>
     (function() {
@@ -1435,20 +1515,20 @@
   <div class="tracks-grid">
 
     <!-- Soundtrack debut announcement -->
-    <div class="soundtrack-banner reveal" style="grid-column:1/-1; text-align:center; padding:1.8rem 2rem; margin-bottom:1rem; background:linear-gradient(135deg,rgba(22,32,54,0.9),rgba(8,12,16,0.97)); border:1px solid rgba(201,152,42,0.4); border-radius:12px; position:relative; overflow:hidden;">
-      <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 2px,rgba(201,152,42,0.04) 2px,rgba(201,152,42,0.04) 4px);pointer-events:none;"></div>
+    <div class="soundtrack-banner reveal" style="grid-column:1/-1; text-align:center; padding:1.8rem 2rem; margin-bottom:1rem; background:linear-gradient(135deg,rgba(22,32,54,0.9),rgba(8,12,16,0.97)); border:1px solid rgba(122,130,137,0.4); border-radius:12px; position:relative; overflow:hidden;">
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 2px,rgba(122,130,137,0.04) 2px,rgba(122,130,137,0.04) 4px);pointer-events:none;"></div>
       <div style="font-family:'Bebas Neue',sans-serif;font-size:0.75rem;letter-spacing:0.25em;color:var(--champagne-dark);margin-bottom:0.4rem;">NOD FACTOR PRODUCTIONS PRESENTS</div>
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:0.12em;background:linear-gradient(90deg,#8A6A1A,#C9982A,#F0D060,#F7E9B0,#F0D060,#C9982A,#8A6A1A);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShimmer 4s linear infinite;">"A Sister's Choice" Soundtrack</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:0.12em;background:linear-gradient(90deg,#596168,#7A8289,#646C73,#D9DCDF,#646C73,#7A8289,#596168);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShimmer 4s linear infinite;">"A Sister's Choice" Soundtrack</div>
       <div style="font-family:'Libre Baskerville',serif;font-style:italic;color:var(--champagne-dark);margin-top:0.5rem;font-size:0.95rem;letter-spacing:0.06em;">Debuts March 15, 2026 — Available on all major platforms</div>
     </div>
 
     <!-- Pre-sale banner -->
-    <div class="presale-banner reveal" style="grid-column:1/-1; text-align:center; padding:1.8rem 2rem; margin-bottom:1rem; background:linear-gradient(135deg,rgba(54,32,22,0.92),rgba(16,12,8,0.97)); border:1px solid rgba(201,152,42,0.6); border-radius:12px; position:relative; overflow:hidden;">
-      <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 2px,rgba(201,152,42,0.04) 2px,rgba(201,152,42,0.04) 4px);pointer-events:none;"></div>
+    <div class="presale-banner reveal" style="grid-column:1/-1; text-align:center; padding:1.8rem 2rem; margin-bottom:1rem; background:linear-gradient(135deg,rgba(54,32,22,0.92),rgba(16,12,8,0.97)); border:1px solid rgba(122,130,137,0.6); border-radius:12px; position:relative; overflow:hidden;">
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 2px,rgba(122,130,137,0.04) 2px,rgba(122,130,137,0.04) 4px);pointer-events:none;"></div>
       <div style="font-family:'Bebas Neue',sans-serif;font-size:0.75rem;letter-spacing:0.25em;color:var(--champagne-dark);margin-bottom:0.4rem;">LIMITED TIME — PRE-SALE NOW LIVE</div>
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:0.12em;background:linear-gradient(90deg,#8A6A1A,#C9982A,#F0D060,#F7E9B0,#F0D060,#C9982A,#8A6A1A);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShimmer 4s linear infinite;">"Peace Baptist District" Pre-Order the Soundtrack</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:0.12em;background:linear-gradient(90deg,#596168,#7A8289,#646C73,#D9DCDF,#646C73,#7A8289,#596168);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShimmer 4s linear infinite;">"Peace Baptist District" Pre-Order the Soundtrack</div>
       <div style="font-family:'Libre Baskerville',serif;font-style:italic;color:var(--champagne-dark);margin-top:0.5rem;font-size:0.95rem;letter-spacing:0.06em;">Secure your copy before the June 1, 2026 release</div>
-      <a href="https://store.nodfactorproductions.com" target="_blank" style="display:inline-block;margin-top:1.2rem;padding:0.85rem 2.2rem;background:linear-gradient(135deg,#C9982A,#F0D060);color:#0a0a0a;font-family:'Bebas Neue',sans-serif;letter-spacing:0.18em;font-size:1.05rem;text-decoration:none;border-radius:6px;font-weight:bold;">Shop the Pre-Sale →</a>
+      <a href="https://store.nodfactorproductions.com" target="_blank" style="display:inline-block;margin-top:1.2rem;padding:0.85rem 2.2rem;background:linear-gradient(135deg,#7A8289,#646C73);color:#0a0a0a;font-family:'Bebas Neue',sans-serif;letter-spacing:0.18em;font-size:1.05rem;text-decoration:none;border-radius:6px;font-weight:bold;">Shop the Pre-Sale →</a>
     </div>
 
     <!-- CARD 1: Spotify -->
@@ -1886,7 +1966,7 @@
       </div>
       <button type="submit" class="submit-btn">Send It ▶</button>
     </form>
-    <div id="formSuccess" style="display:none; text-align:center; padding:2rem; border:1px solid var(--orange); border-radius:8px; margin-top:1rem; background:rgba(201,152,42,0.1);">
+    <div id="formSuccess" style="display:none; text-align:center; padding:2rem; border:1px solid var(--orange); border-radius:8px; margin-top:1rem; background:rgba(122,130,137,0.1);">
       <div style="font-size:2rem; margin-bottom:0.5rem;">✅</div>
       <h3 style="font-family:'Bebas Neue',sans-serif; color:var(--yellow); letter-spacing:0.05em; font-size:1.5rem;">Message Received!</h3>
       <p style="color:var(--cream); font-size:0.9rem;">We'll be in touch within 24–48 hours.<br>— Nod Factor Productions</p>
