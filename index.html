@@ -1387,6 +1387,25 @@ footer .footer-credit a { color: #8ecbff !important; }
 .fader-track { background: rgba(58,122,255,.28) !important; }
 .fader-thumb { background: linear-gradient(180deg, #39adff, #8b45ff) !important; box-shadow: 0 0 12px rgba(71,133,255,.54) !important; }
 </style>
+<style id="nod-factor-network">
+.mixer-logo{color:#fff4f1!important;text-decoration:none!important;white-space:nowrap}
+.mixer-faders{gap:.35rem;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin}
+.mixer-fader{min-width:52px}
+.ecosystem-section{max-width:1400px!important;padding:5rem 2rem!important}
+.ecosystem-intro{max-width:720px;margin:16px auto 0;color:#c5c7df}
+.ecosystem-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.ecosystem-card{position:relative;isolation:isolate;display:flex;min-height:310px;flex-direction:column;justify-content:flex-end;overflow:hidden;border:1px solid rgba(246,214,143,.32);border-radius:18px;background:#101426;color:#fff;text-decoration:none;box-shadow:0 16px 40px rgba(0,0,0,.34);transition:transform .22s,border-color .22s,box-shadow .22s}
+.ecosystem-card::after{content:"";position:absolute;inset:20% 0 0;background:linear-gradient(180deg,transparent 0%,rgba(5,6,14,.48) 35%,rgba(5,6,14,.97) 100%);z-index:-1}
+.ecosystem-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .45s,filter .3s;filter:saturate(1.2)}
+.ecosystem-card:hover{transform:translateY(-5px);border-color:#ff7897;box-shadow:0 18px 45px rgba(145,92,255,.22)}
+.ecosystem-card:hover img{transform:scale(1.04);filter:saturate(1.4)}
+.ecosystem-label{padding:0 17px;color:#fff4f1;font:600 17px/1.2 'Cinzel',serif}
+.ecosystem-meta{padding:7px 17px 0;color:#e4d6c5;font:600 9px/1.4 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
+.ecosystem-action{padding:16px 17px 18px;color:#f6d68f;font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:1000px){.ecosystem-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.ecosystem-card{min-height:270px}}
+@media(max-width:680px){.mixer-bar{align-items:flex-start;gap:10px;padding:.7rem 1rem}.mixer-logo{font-size:1rem!important}.mixer-faders{width:100%;justify-content:flex-start}.ecosystem-section{padding:4rem 1rem!important}.ecosystem-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ecosystem-card{min-height:230px}.ecosystem-label{font-size:14px}}
+@media(max-width:420px){.ecosystem-grid{grid-template-columns:1fr}.ecosystem-card{min-height:250px}}
+</style>
 </head>
 <body>
 
@@ -1418,35 +1437,14 @@ footer .footer-credit a { color: #8ecbff !important; }
 </header>
 
 <!-- STICKY MIXER NAV -->
-<nav class="mixer-bar">
-  <div class="mixer-logo">NOD FACTOR PRODUCTIONS</div>
-  <div class="mixer-faders">
-    <a href="#music" class="mixer-fader">
-      <div class="fader-track"><div class="fader-knob"></div></div>
-      <span class="fader-label">Music</span>
-    </a>
-    <a href="#radio" class="mixer-fader">
-      <div class="fader-track"><div class="fader-knob"></div></div>
-      <span class="fader-label">Radio</span>
-    </a>
-    <a href="#showroom" class="mixer-fader">
-      <div class="fader-track"><div class="fader-knob"></div></div>
-      <span class="fader-label">Video</span>
-    </a>
-    <a href="#artists" class="mixer-fader">
-      <div class="fader-track"><div class="fader-knob"></div></div>
-      <span class="fader-label">Artists</span>
-    </a>
-    <a href="#services" class="mixer-fader">
-      <div class="fader-track"><div class="fader-knob"></div></div>
-      <span class="fader-label">Services</span>
-    </a>
-    <a href="#contact" class="mixer-fader">
-      <div class="fader-track"><div class="fader-knob"></div></div>
-      <span class="fader-label">Contact</span>
-    </a>
-  </div>
-</nav>
+<nav class="mixer-bar" aria-label="Primary navigation"><a class="mixer-logo" href="index.html" aria-label="Nod Factor Productions home">NOD FACTOR PRODUCTIONS</a><div class="mixer-faders">
+<a href="about.html" class="mixer-fader"><div class="fader-track"><div class="fader-knob"></div></div><span class="fader-label">About</span></a>
+<a href="productions.html" class="mixer-fader"><div class="fader-track"><div class="fader-knob"></div></div><span class="fader-label">Studio</span></a>
+<a href="media.html" class="mixer-fader"><div class="fader-track"><div class="fader-knob"></div></div><span class="fader-label">Media</span></a>
+<a href="radio.html" class="mixer-fader"><div class="fader-track"><div class="fader-knob"></div></div><span class="fader-label">Radio</span></a>
+<a href="store.html" class="mixer-fader"><div class="fader-track"><div class="fader-knob"></div></div><span class="fader-label">Da Store</span></a>
+<a href="rewards.html" class="mixer-fader"><div class="fader-track"><div class="fader-knob"></div></div><span class="fader-label">Rewards</span></a>
+<a href="booking.html" class="mixer-fader"><div class="fader-track"><div class="fader-knob"></div></div><span class="fader-label">Book</span></a></div></nav>
 
 <!-- RADIO -->
 <section id="radio" style="max-width:1300px; margin:0 auto; padding:6rem 2rem;">
@@ -1736,7 +1734,13 @@ footer .footer-credit a { color: #8ecbff !important; }
 <div class="tape-strip"></div>
 
 <!-- SERVICES -->
-<section id="services" style="max-width:1300px; margin:0 auto; padding:6rem 2rem;">
+<section id="ecosystem" class="ecosystem-section"><div class="section-header reveal"><span class="section-label">The Nod Factor Network</span><h2 class="section-title"><span class="gold-text">One world. Many ways in.</span></h2><div class="section-line"></div><p class="ecosystem-intro">A connected home for the artists, listeners and partners who make the Nod Factor community.</p></div><div class="ecosystem-grid">
+<a class="ecosystem-card" href="https://form.jotform.com/262856172619062" target="_blank" rel="noopener noreferrer"><img src="AI%20Clone.jpg" alt="Artist portrait from Nod Factor" loading="lazy"><span class="ecosystem-label">Artist Dashboard</span><span class="ecosystem-meta">Phase II · intake open</span><span class="ecosystem-action">Submit music ↗</span></a>
+<a class="ecosystem-card" href="https://store.nodfactorproductions.com/" target="_blank" rel="noopener noreferrer"><img src="Microphone.jpg" alt="Nod Factor music and studio identity" loading="lazy"><span class="ecosystem-label">Da Store</span><span class="ecosystem-meta">Current soundtrack store</span><span class="ecosystem-action">Visit store ↗</span></a>
+<a class="ecosystem-card" href="store.html"><img src="reward-tshirt.png" alt="Nod Factor merchandise" loading="lazy"><span class="ecosystem-label">Da Merch</span><span class="ecosystem-meta">Rewards and collections</span><span class="ecosystem-action">Explore merch →</span></a>
+<a class="ecosystem-card" href="productions.html"><img src="Creativity%20Space.jpg" alt="Nod Factor creative production workspace" loading="lazy"><span class="ecosystem-label">Nod Factor Studio</span><span class="ecosystem-meta">Production &amp; media</span><span class="ecosystem-action">Explore studio →</span></a>
+<a class="ecosystem-card" href="radio.html"><img src="The%20Artist%20Singing.jpg" alt="Nod Factor artist performing live" loading="lazy"><span class="ecosystem-label">Nod Factor Radio</span><span class="ecosystem-meta">Soul · Funk · R&amp;B · Hip-Hop</span><span class="ecosystem-action">Listen live →</span></a>
+</div></section><section id="services" style="max-width:1300px; margin:0 auto; padding:6rem 2rem;">
   <div class="section-header reveal">
     <span class="section-label">What We Do</span>
     <h2 class="section-title"><span class="gold-text">Services</span></h2>
