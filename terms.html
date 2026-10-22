@@ -22,13 +22,45 @@
 <p class="legal-intro">These terms apply to the Nod Factor Radio text-message program operated by Nod Factor Productions and Media.</p>
 
 <h2>Nod Factor Radio Text Messaging Program</h2>
-<p>Nod Factor Radio, operated by Nod Factor Productions and Media, sends station updates, show and event news, promotions, and updates for artists who submit music.</p>
+<p>Nod Factor Radio, operated by Nod Factor Productions and Media, offers two distinct, optional text-message programs: (1) marketing and promotional messages such as station promotions, show and event news, merchandise offers, and giveaways; and (2) informational messages about song submissions, submission status, and related non-promotional service updates.</p>
 
-<h3>Opt-In and Consent</h3>
-<p>You may opt in through a separate text-message checkbox on our web forms. The checkbox is unchecked by default; you must select it yourself to consent to receive text messages. Consent to receive text messages is not required to submit a form or make a purchase.</p>
+<h3>Opt-In and Separate Consent</h3>
+<p>Consent for marketing texts and consent for informational/song-submission texts are collected with <strong>two independent checkboxes</strong>. Both start unchecked. Checking one does not authorize messages from the other program. You can join either program, both, or neither. Text-message consent is not a condition of purchasing products, submitting songs, receiving a giveaway, or using our services. Acceptance of these Terms or our Privacy Policy does not itself enroll you in either text program.</p>
 
 <h3>Message Frequency and Rates</h3>
 <p>Message frequency varies, up to 4 messages per month. Message and data rates may apply.</p>
+
+
+<section class="sms-consent-panel" aria-labelledby="sms-consent-heading-terms">
+  <h3 id="sms-consent-heading-terms">Choose Your Text Message Preferences</h3>
+  <p>Signing up for texts is optional. Marketing and informational messages require <strong>separate consent</strong>. Both options are unchecked until you choose them. You may select one or both; neither is required to use the website, submit music, enter a giveaway, or make a purchase.</p>
+  <form name="radio-sms-opt-in-terms" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="sms-consent-form" data-sms-consent-form>
+    <input type="hidden" name="form-name" value="radio-sms-opt-in-terms">
+    <input type="hidden" name="consent_version" value="2026-10-21-separate-marketing-informational">
+    <input type="hidden" name="consent_source" value="terms">
+    <p class="sms-honeypot" aria-hidden="true"><label>Leave this field blank <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sms-phone-label" for="sms-mobile-terms">Mobile phone number <span aria-hidden="true">*</span></label>
+    <input type="tel" id="sms-mobile-terms" name="mobile_phone" autocomplete="tel" inputmode="tel" placeholder="(555) 555-5555" required>
+    <fieldset class="sms-consent-choices">
+      <legend>Select the messages you want to receive (optional)</legend>
+      <label class="sms-choice" for="sms-marketing-terms">
+        <input id="sms-marketing-terms" name="marketing_sms_consent" type="checkbox" value="yes">
+        <span><strong>Marketing &amp; promotional texts</strong><span class="sms-optional"> — Optional</span><br>
+        I expressly agree to receive recurring marketing and promotional text messages from Nod Factor Radio, operated by Nod Factor Productions and Media, such as station promotions, events, merchandise offers, and giveaways.</span>
+      </label>
+      <label class="sms-choice" for="sms-informational-terms">
+        <input id="sms-informational-terms" name="informational_sms_consent" type="checkbox" value="yes">
+        <span><strong>Informational &amp; song-submission updates</strong><span class="sms-optional"> — Optional</span><br>
+        I agree to receive informational text messages from Nod Factor Radio, operated by Nod Factor Productions and Media, about my song submissions, submission status, and related non-promotional service notifications. This choice does not enroll me in marketing texts.</span>
+      </label>
+    </fieldset>
+    <p class="sms-disclosure">Message frequency varies, up to 4 messages per month. Message and data rates may apply. Reply <strong>STOP</strong> to unsubscribe or <strong>HELP</strong> for assistance. Consent is not a condition of purchase or song submission. See our <a href="terms.html">Terms &amp; Conditions</a> and <a href="privacy-policy.html">Privacy Policy</a>.</p>
+    <p class="sms-error" role="alert" aria-live="polite" hidden>Please select at least one text program, or leave this optional form unsubmitted.</p>
+    <button class="btn sms-submit" type="submit">Submit My Text Preferences</button>
+  </form>
+  <p class="sms-footnote">Submitting this form records your separate preferences. It does not automatically submit a song or enroll you in VIP Rewards.</p>
+</section>
+
 
 <h3>Opt-Out and Help</h3>
 <p>You can opt out at any time by replying STOP to any message. You will receive one confirmation message. For help, reply HELP or contact us through the <a href="booking.html">Booking page</a> on this site.</p>
@@ -41,5 +73,22 @@
 </main>
 
 <footer>&copy; 2026 Nod Factor Productions<br><span class="legal-footer-links"><a href="terms.html">Terms &amp; Conditions</a></span></footer>
+
+<script>
+document.querySelectorAll('[data-sms-consent-form]').forEach(function(form) {
+  form.addEventListener('submit', function(event) {
+    var marketing = form.querySelector('[name="marketing_sms_consent"]').checked;
+    var informational = form.querySelector('[name="informational_sms_consent"]').checked;
+    var error = form.querySelector('.sms-error');
+    if (!marketing && !informational) {
+      event.preventDefault();
+      error.hidden = false;
+      form.querySelector('[name="marketing_sms_consent"]').focus();
+    } else {
+      error.hidden = true;
+    }
+  });
+});
+</script>
 </body>
 </html>
