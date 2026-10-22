@@ -70,3 +70,22 @@ button.btn:hover{background:var(--gold);color:var(--black);}
   nav>div:last-child{display:flex;flex-wrap:wrap;gap:10px;}
   nav a{margin-left:0;}
 }
+
+/* Independent marketing / informational opt-in controls on legal pages */
+.legal-page .sms-consent-panel{margin:32px 0;padding:25px;background:#111a27;border:1px solid rgba(198,166,74,.55);border-radius:12px}
+.legal-page .sms-consent-panel h3{margin-top:0;font-size:1.15rem}
+.legal-page .sms-consent-form{max-width:780px;margin-top:20px}
+.legal-page .sms-phone-label{display:block;font-weight:600;margin:0 0 8px}
+.legal-page .sms-consent-choices{border:0;padding:0;min-width:0;margin:10px 0 0}
+.legal-page .sms-consent-choices legend{font-weight:600;padding:0 0 10px}
+.legal-page .sms-choice{display:flex;align-items:flex-start;gap:14px;padding:17px;margin:0 0 13px;border:1px solid rgba(198,166,74,.43);border-radius:8px;background:#19283a;cursor:pointer;line-height:1.65}
+.legal-page .sms-choice input[type="checkbox"]{flex:none;width:21px;height:21px;margin-top:4px;accent-color:#C6A64A;cursor:pointer}
+.legal-page .sms-choice strong{color:#fff}
+.legal-page .sms-optional{color:#e1ca8d;font-weight:400}
+.legal-page .sms-disclosure{font-size:.93rem;color:#ebebeb}
+.legal-page .sms-footnote{font-size:.85rem;color:#c9ced8}
+.legal-page .sms-error{color:#ffd4ce;font-weight:600}
+.legal-page .sms-error[hidden]{display:none}
+.legal-page .sms-honeypot{position:absolute;left:-9999px}
+.legal-page .sms-submit{margin-top:8px}
+@media(max-width:700px){.legal-page .sms-consent-panel{padding:17px}.legal-page .sms-choice{padding:12px;gap:10px}}
