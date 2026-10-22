@@ -19,7 +19,7 @@
 <h1>Privacy Policy</h1>
 <div class="gold-divider"></div>
 
-<p><strong>Effective Date:</strong> July 30, 2026</p>
+<p><strong>Effective Date:</strong> October 21, 2026</p>
 
 <p>Nod Factor Productions ("we," "our," or "us") operates this website and the embedded Nod Factor Radio player powered by Radio.co. This Privacy Policy explains what information is collected when you visit this site and listen to our radio stream, and how that information is used.</p>
 
@@ -65,11 +65,45 @@ We may receive basic, anonymized analytics about how visitors use this site (suc
 <h2>8. Text Messaging (SMS)</h2>
 <p>Nod Factor Productions operates a text-message program for Nod Factor Radio. This section explains how we collect and use mobile phone numbers for that program.</p>
 
-<h3>How We Collect Your Number</h3>
-<p>We collect mobile phone numbers only when you choose to opt in through our web forms, including the Nod Factor Radio "Submit up to 3 Songs" form and our VIP text sign-up. Consent is given through a separate text-message checkbox that is unchecked by default. You must check it yourself to receive texts. Consent to receive text messages is not required to submit a form, make a purchase, or receive any giveaway.</p>
+<h3>How We Collect Your Number and Consent</h3>
+<p>We collect your mobile number when you voluntarily submit it through a text-message opt-in form. The consent choices on this page and our Terms page are separate from any song-submission, purchase, or giveaway activity. Each checkbox is unchecked by default, and we record marketing consent separately from informational/song-submission consent. Consent to either type of text message is optional; choosing one does not authorize the other, and simply reading or accepting these policies does not constitute SMS consent.</p>
 
-<h3>How We Use Text Messages</h3>
-<p>If you opt in, we use your number to send Nod Factor Radio station updates, show and event news, promotions, and messages related to what you signed up for, such as updates on a song submission. Message frequency varies, up to 4 messages per month. Message and data rates may apply.</p>
+<h3>Separate Uses of Text Messages</h3>
+<p><strong>Marketing and promotional texts:</strong> If you select the marketing checkbox, we may text you about Nod Factor Radio station promotions, events and shows, merchandise, special offers, and giveaways.</p>
+<p><strong>Informational and song-submission texts:</strong> If you select the informational checkbox, we may text you about a song you submitted, submission status, or related non-promotional service information. This choice does not authorize marketing texts.</p>
+<p>Message frequency varies, up to 4 messages per month. Message and data rates may apply. We use your selected preferences to determine which messages you may receive, and retain consent records for accountability.</p>
+
+
+<section class="sms-consent-panel" aria-labelledby="sms-consent-heading-privacy">
+  <h3 id="sms-consent-heading-privacy">Choose Your Text Message Preferences</h3>
+  <p>Signing up for texts is optional. Marketing and informational messages require <strong>separate consent</strong>. Both options are unchecked until you choose them. You may select one or both; neither is required to use the website, submit music, enter a giveaway, or make a purchase.</p>
+  <form name="radio-sms-opt-in-privacy" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="sms-consent-form" data-sms-consent-form>
+    <input type="hidden" name="form-name" value="radio-sms-opt-in-privacy">
+    <input type="hidden" name="consent_version" value="2026-10-21-separate-marketing-informational">
+    <input type="hidden" name="consent_source" value="privacy">
+    <p class="sms-honeypot" aria-hidden="true"><label>Leave this field blank <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sms-phone-label" for="sms-mobile-privacy">Mobile phone number <span aria-hidden="true">*</span></label>
+    <input type="tel" id="sms-mobile-privacy" name="mobile_phone" autocomplete="tel" inputmode="tel" placeholder="(555) 555-5555" required>
+    <fieldset class="sms-consent-choices">
+      <legend>Select the messages you want to receive (optional)</legend>
+      <label class="sms-choice" for="sms-marketing-privacy">
+        <input id="sms-marketing-privacy" name="marketing_sms_consent" type="checkbox" value="yes">
+        <span><strong>Marketing &amp; promotional texts</strong><span class="sms-optional"> — Optional</span><br>
+        I expressly agree to receive recurring marketing and promotional text messages from Nod Factor Radio, operated by Nod Factor Productions and Media, such as station promotions, events, merchandise offers, and giveaways.</span>
+      </label>
+      <label class="sms-choice" for="sms-informational-privacy">
+        <input id="sms-informational-privacy" name="informational_sms_consent" type="checkbox" value="yes">
+        <span><strong>Informational &amp; song-submission updates</strong><span class="sms-optional"> — Optional</span><br>
+        I agree to receive informational text messages from Nod Factor Radio, operated by Nod Factor Productions and Media, about my song submissions, submission status, and related non-promotional service notifications. This choice does not enroll me in marketing texts.</span>
+      </label>
+    </fieldset>
+    <p class="sms-disclosure">Message frequency varies, up to 4 messages per month. Message and data rates may apply. Reply <strong>STOP</strong> to unsubscribe or <strong>HELP</strong> for assistance. Consent is not a condition of purchase or song submission. See our <a href="terms.html">Terms &amp; Conditions</a> and <a href="privacy-policy.html">Privacy Policy</a>.</p>
+    <p class="sms-error" role="alert" aria-live="polite" hidden>Please select at least one text program, or leave this optional form unsubmitted.</p>
+    <button class="btn sms-submit" type="submit">Submit My Text Preferences</button>
+  </form>
+  <p class="sms-footnote">Submitting this form records your separate preferences. It does not automatically submit a song or enroll you in VIP Rewards.</p>
+</section>
+
 
 <h3>No Sharing of Mobile Information</h3>
 <p>We do not sell, rent, or share your mobile phone number or text-message opt-in data with third parties or affiliates for marketing or promotional purposes. Mobile information is shared only with the service providers that deliver our messages, and only to provide this program. Text messaging originator opt-in data and consent will not be shared with any third parties.</p>
@@ -79,5 +113,22 @@ We may receive basic, anonymized analytics about how visitors use this site (suc
 </main>
 
 <footer>&copy; 2026 Nod Factor Productions<br><span class="legal-footer-links"><a href="terms.html">Terms &amp; Conditions</a></span></footer>
+
+<script>
+document.querySelectorAll('[data-sms-consent-form]').forEach(function(form) {
+  form.addEventListener('submit', function(event) {
+    var marketing = form.querySelector('[name="marketing_sms_consent"]').checked;
+    var informational = form.querySelector('[name="informational_sms_consent"]').checked;
+    var error = form.querySelector('.sms-error');
+    if (!marketing && !informational) {
+      event.preventDefault();
+      error.hidden = false;
+      form.querySelector('[name="marketing_sms_consent"]').focus();
+    } else {
+      error.hidden = true;
+    }
+  });
+});
+</script>
 </body>
 </html>
